@@ -108,8 +108,6 @@ button:disabled {
     position: absolute;
     width: 60px;
     height: 40px;
-    background-color: #4CAF50;
-    border-radius: 10px;
     z-index: 2;
     left: 100px;
     top: 50%;
@@ -119,23 +117,94 @@ button:disabled {
 #player::before {
     content: '';
     position: absolute;
-    width: 15px;
-    height: 5px;
+    width: 60px;
+    height: 30px;
     background-color: #333;
-    top: -5px;
-    left: 10px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 50% 50% 0 0;
+    top: 5px;
 }
 
 #player::after {
     content: '';
     position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 0 0 50% 50%;
+    bottom: 5px;
+}
+
+.drone-body {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.propeller {
+    position: absolute;
     width: 15px;
     height: 5px;
-    background-color: #333;
-    top: -5px;
-    right: 10px;
-    border-radius: 5px 5px 0 0;
+    background-color: #777;
+    border-radius: 5px;
+}
+
+.propeller.top-left {
+    top: 0;
+    left: 5px;
+}
+
+.propeller.top-right {
+    top: 0;
+    right: 5px;
+}
+
+.propeller.bottom-left {
+    bottom: 0;
+    left: 5px;
+}
+
+.propeller.bottom-right {
+    bottom: 0;
+    right: 5px;
+}
+
+.propeller::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #777;
+    top: 1.5px;
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.camera {
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    background-color: #111;
+    border-radius: 3px;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+
+.camera::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: #00BFFF;
+    border-radius: 50%;
+    top: 2px;
+    left: 3px;
 }
 
 .wall {
