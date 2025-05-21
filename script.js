@@ -34,7 +34,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let gameSpeed = 2;
     let walls = [];
     let batteries = [];
-    
+
+    function createDrone() {
+    player.innerHTML = `
+        <div class="drone-body"></div>
+        <div class="propeller top-left"></div>
+        <div class="propeller top-right"></div>
+        <div class="propeller bottom-left"></div>
+        <div class="propeller bottom-right"></div>
+        <div class="camera"></div>
+    `;
+}
     // Состояние клавиш
     let keysPressed = {
         'w': false,
